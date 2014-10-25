@@ -6,13 +6,13 @@
 
 class Solution {
     public int solution(int[] A) {
-    int sum = ((A.length+1)*(A.length+2))/2;
-    
-    int missing = sum;
-    for (int i = 0; i<A.length; i++) { 
-        missing -= A[i];
-    }
-    
-    return missing;
+        // write your code in Java SE 8
+        long sum = (long)(A.length + 1)*(long)(A.length+2)/2;
+        
+        for (int i = 0; i < A.length; i++) {
+            sum -= A[i];
+        }
+        
+        return (int) sum;
     }
 }
